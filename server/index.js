@@ -7,6 +7,7 @@ const router = require('./router');
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost:/auth/auth');
+mongoose.Promise = global.Promise;
 
 // App setup
 app.use(morgan('combined'));
